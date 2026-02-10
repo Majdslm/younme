@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Private Viewing</title>
 
-  <!-- Elegant serif font (ZARA / ZARA Home vibe) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
@@ -16,35 +16,48 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       font-family: 'Libre Baskerville', serif;
       color: #111;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .container {
       text-align: center;
+      width: 100%;
+      max-width: 1200px; /* Limits the layout width on giant monitors */
     }
 
     video {
-      width: 360px;
-      max-height: 80vh;
+      /* This makes the video much larger by default */
+      width: 100%;
+      max-width: 450px; 
+      height: auto;
+      max-height: 75vh;
       background-color: #000;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 4px; /* Optional: adds a very slight elegant curve */
     }
 
     .caption {
-      margin-top: 18px;
-      font-size: 13px;
-      letter-spacing: 0.12em;
+      margin-top: 30px;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
     }
 
     .download {
-      margin-top: 10px;
+      margin-top: 20px;
       font-size: 11px;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.2em;
       text-decoration: none;
       color: #111;
-      opacity: 0.6;
+      opacity: 0.5;
       display: inline-block;
+      border-bottom: 1px solid #111;
+      padding-bottom: 4px;
+      transition: opacity 0.3s ease;
     }
 
     .download:hover {
@@ -61,7 +74,7 @@
       Your browser does not support the video tag.
     </video>
 
-    <div class="caption">VALENTINE</div>
+    <div class="caption">You.n.Me❣️✨</div>
 
     <a class="download" href="YouMe.mp4" download>
       DOWNLOAD
